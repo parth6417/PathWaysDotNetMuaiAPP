@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PathWays.Register"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+>
+
+
+    <ScrollView >
+
+        <VerticalStackLayout BackgroundColor="White" MinimumWidthRequest="250" MinimumHeightRequest="300" >
+            <Image  x:Name="Image" 
+       HeightRequest="60"
+       HorizontalOptions="Center"
+       VerticalOptions="Center"
+       Source="logo.png" />
+
+            <Frame Padding="10,2,10,2" Margin="0,30,0,10" BackgroundColor="#3498db">
+                <StackLayout >
+                    <Label Text="Registartion"  FontSize="18"  TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+            <Image x:Name="UploadedOrSelectedImage"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Source="logo.png" />
+
+         
+
+            <Entry x:Name="First_Name" Placeholder="First Name"
+               Margin="0,0,0,5"  TextChanged="firstname_textchage" ReturnType="Next"/>
+            <Label x:Name="validFName" Text="First Name is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+            <Entry  x:Name="Middle_Name" Placeholder="Middle Name"
+               Margin="0,0,0,5" ReturnType="Next" />
+
+
+            <Entry  x:Name="Last_Name" Placeholder="Last Name"
+                TextChanged="Lastname_textchage"
+               Margin="0,0,0,20" ReturnType="Next" />
+            <Label x:Name="validLName" Text="Last Name is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+
+            <Picker Title="Select Gender" x:Name="Gender"
+                Margin="0,0,0,20" SelectedIndexChanged="onselectGender">
+                <Picker.Items>
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label x:Name="validGender" Text="Gender is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+
+            <Entry Placeholder="Email" x:Name="Email_1"
+                TextChanged="Email_textchage"
+               Margin="0,0,0,5" ReturnType="Next" />
+
+            <Label x:Name="validEmail" Text="Email is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+            <Label x:Name="validformate" Text="Email is not correct"  TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+            <Entry Placeholder="Mobile Phone" Keyboard="Numeric"  x:Name="Mobile_Phone"
+                TextChanged="Mobile_textchage"
+               Margin="0,0,0,5" ReturnType="Next" />
+            <Label x:Name="validphone" Text="Mobile Phone is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+            <Entry Placeholder="Address" x:Name="Address_1"
+                TextChanged="Address_textchage"
+               Margin="0,0,0,5" ReturnType="Next" />
+            <Label x:Name="validAddress_1" Text="Address is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+
+            <Entry Placeholder="Postal Code" Keyboard="Numeric" x:Name="Postal_Code"
+               TextChanged="Postal_textchage"
+               Margin="0,0,0,20" ReturnType="Done" />
+            <Label x:Name="validpostal" Text="Postal Code is required" TextColor="Red"  Margin="0,0,0,20" IsVisible="false"></Label>
+
+
+            <Button x:Name="btnRegister" Text="Register"
+                Clicked="OnRegisterClicked"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                CornerRadius="5"
+                Margin="0,0,0,20" />
+
+            <Button x:Name="btnclose" Text="Close!"
+                Clicked="NoButton_Clicked"/>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PathWays.Home"
+             >
+    <VerticalStackLayout Margin="100" >
+
+
+ 
+        <Image x:Name="UploadedOrSelectedImage"
+           HeightRequest="100"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           Source="logo.png" />
+
+        <Button Margin="10,100,0,100" FontSize="16" BackgroundColor="#3498db" TextColor="White"   Clicked="Button_Clicked" Text="Capture" />
+
+    </VerticalStackLayout>
+</ContentPage>

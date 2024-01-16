@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit" 
+             x:Class="PathWays.LogInUserDetails"
+             >
+    <VerticalStackLayout BackgroundColor="White"  VerticalOptions="Start"  HorizontalOptions="Center" Padding="20">
+
+        <Image x:Name="UploadedOrSelectedImage"
+       HeightRequest="100"
+       Source="logo.png" Margin="0,0,0,20" />
+
+        <Frame Padding="10,2,10,2" Margin="0,30,0,0" BackgroundColor="#3498db">
+            <StackLayout >
+                <Label Text="Person Details"  FontSize="18"  TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2" Margin="0,10,0,0">
+            <StackLayout>
+                <StackLayout Margin="0,10,0,0">
+                    <Label Text="Full Name" FontSize="16" TextColor="Gray" />
+                    <Label x:Name="FullName" Text="Parth Vagharodiya" TextColor="Black" FontSize="14" />
+                </StackLayout>
+
+                <StackLayout Margin="0,10,0,0">
+                    <Label Text="Email" FontSize="16"  TextColor="Gray"  />
+                    <Label x:Name="txtEmail" Text="Parth@gmail.com" TextColor="Black" FontSize="14" />
+                </StackLayout>
+
+                <StackLayout Margin="0,10,0,0">
+                    <Label Text="Phone" FontSize="16"  TextColor="Gray"  />
+                    <Label x:Name="Phone" Text="9687835209" TextColor="Black" FontSize="14" />
+                </StackLayout>
+
+                <StackLayout Margin="0,10,0,0">
+                    <Label Text="Gender" FontSize="16"  TextColor="Gray"  />
+                    <Label x:Name="Gender" Text="Male" TextColor="Black" FontSize="14" />
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+        <Frame Padding="10,2,10,2" Margin="0,30,0,0">
+            <StackLayout Margin="0,10,0,0">
+                <Label Text="Whom to Meet??" Margin="0,10,0,0" FontSize="16" FontAttributes="Bold" />
+                <Entry x:Name="txtWTM" FontSize="14" Margin="0,10,0,0" Placeholder="Enter Name" />
+                <Label x:Name="validWTM" Text="Is required" TextColor="Red" Margin="0,10,0,0" IsVisible="false"></Label>
+            </StackLayout>
+        </Frame>
+
+        <Button Margin="10,100,10,10" x:Name="btnSaveAndNext" Text="Save and Next" Clicked="Close_Clicked" FontSize="16" BackgroundColor="#3498db" TextColor="White" VerticalOptions="End" />
+
+    </VerticalStackLayout>
+</ContentPage>

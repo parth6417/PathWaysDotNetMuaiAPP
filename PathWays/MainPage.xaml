@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Class="PathWays.MainPage">
+
+    <ScrollView>
+        <StackLayout>
+
+
+
+           
+            <Image  x:Name="UploadedOrSelectedImage" 
+                   HeightRequest="60"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Source="logo.png" />
+            <Button x:Name="closebutton" Text="X"  Clicked="Close_Clicked"   FontSize="16" BackgroundColor="#3498db" TextColor="White" VerticalOptions="Start" HorizontalOptions="End" />
+
+         
+        
+            <cv:CameraView x:Name="cameraView"  CamerasLoaded="OnCounterClicked" HeightRequest="300" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  WidthRequest="300" />
+            <Button Text="Change Camera" x:Name="changecameraButton" FontSize="16" BackgroundColor="#3498db" TextColor="White" Margin="25"  Clicked="ChangePosition"  />
+            <Button Text="Smile!" x:Name="cameraButton" FontSize="16" BackgroundColor="#3498db" TextColor="White" Margin="6" Clicked="Button_Clicked"   />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
